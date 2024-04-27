@@ -1,0 +1,21 @@
+name: Auto Github Release
+
+on:
+  push:
+    tags: [ "v*.*.*" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          draft: false
+          prerelease: false
+          files: |
+            dist/*.zip
+            dist/*.tar.gz
