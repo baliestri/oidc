@@ -21,7 +21,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ports\OIDC.Infra.Store.Port\OIDC.Infra.Store.Port.csproj" />
+    <ProjectReference Include="..\..\ports\OIDC.Infra.Store.Port\OIDC.Infra.Store.Port.csproj"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EFCore.NamingConventions" Version="8.0.3"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.4"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>

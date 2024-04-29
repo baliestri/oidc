@@ -14,9 +14,8 @@ await WebApplication
       .ConfigureLogging(configurationManager);
 
     serviceCollection
-      .RegisterCommonAdapter();
-    //   .RegisterPersistenceAdapter(configurationManager)
-    //   .RegisterApplication();
+      .RegisterCommonAdapter()
+      .RegisterStoreAdapter(configurationManager);
   })
   .RegisterComponents((applicationBuilder, endpointRouteBuilder, configuration, serviceProvider, environment, logger) => {
     applicationBuilder
